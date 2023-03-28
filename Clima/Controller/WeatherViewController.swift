@@ -3,6 +3,7 @@
 //  Clima
 //
 //  Created by Angela Yu on 01/09/2019.
+//  Edited by Sebastian Morado on 01/19/2021
 //  Copyright © 2019 App Brewery. All rights reserved.
 //
 
@@ -25,7 +26,6 @@ class WeatherViewController: UIViewController {
         weatherManager.delegate = self
         searchTextField.delegate = self
         locationManager.delegate = self
-        
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
     }
@@ -80,6 +80,7 @@ extension WeatherViewController: WeatherManagerDelegate {
         }
         
     }
+    
     func didFailWithError(error: Error?) {
         print(error!)
     }
